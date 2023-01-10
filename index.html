@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/slyle.css">
+</head>
+
+<body>
+    <div class="clock">
+    </div>
+    <script>
+        let clock = document.querySelector('.clock');
+
+        function time() {
+            let date = new Date();
+
+            let hours = date.getHours();
+            let min = date.getMinutes();
+            let sec = date.getSeconds();
+            let dates = date.getDate();
+            let months = date.getMonth();
+
+            if (hours < 10) {
+                hours = '0' + hours;
+            }
+            if (min < 10) {
+                min = '0' + min;
+            }
+            if (sec < 10) {
+                sec = '0' + sec;
+            }
+            if (dates < 10) {
+                dates = '0' + dates;
+            }
+            if (months < 10) {
+                months = '0' + months;
+            }
+            clock.innerHTML = `${months+1}/${dates} <br> ${hours}:${min}:${sec}`;
+        }
+
+        setInterval(time, 1000);
+    </script>
+</body>
+
+</html>

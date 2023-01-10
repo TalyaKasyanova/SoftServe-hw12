@@ -1,0 +1,19 @@
+@font-face {
+    font-family: "digital-7";
+    font-style: normal;
+    font-weight: 400;
+
+    src: local("digital-7"),
+        url("../fonts/digital-7.ttf") format("ttf");
+}
+
+body {
+    background: #1f1f1f;
+}
+
+.clock {
+    font-size: 80px;
+    font-family: "digital-7", Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #fff200;
+}
