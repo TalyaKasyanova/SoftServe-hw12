@@ -19,11 +19,11 @@
     <script>
         const lang = navigator.language;
         let date = new Date();
-        let dayNumber = date.getDate();
-        let month = date.getMonth();
+        let dayNumber = date.getDate(); // дата
+        let month = date.getMonth(); // місяць від 0-11
         let monthName = date.toLocaleString(lang, {
             month: 'long'
-        });
+        }); // назва місяця на мові браузера
 
         document.getElementById('monthName').innerHTML = monthName;
         document.getElementById('dayNumber').innerHTML = dayNumber;
