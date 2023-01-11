@@ -11,16 +11,17 @@ body {
     background: #1f1f1f;
 }
 
-.clock {
-    font-size: 80px;
+.clock,
+.calendar {
     font-family: "digital-7", Arial, Helvetica, sans-serif;
     text-align: center;
     color: #fff200;
 }
 
 .calendar {
-    text-align: center;
-    color: #fff200;
-    font-family: "digital-7", Arial, Helvetica, sans-serif;
     font-size: 40px;
+}
+
+.clock {
+    font-size: 80px;
 }
