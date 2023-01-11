@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 
 <head>
     <meta charset="UTF-8">
@@ -10,9 +10,24 @@
 </head>
 
 <body>
+    <div class="calendar">
+        <span id="monthName"></span>
+        <span id="dayNumber"></span>
+    </div>
     <div class="clock">
     </div>
     <script>
+        const lang = navigator.language;
+        let date = new Date();
+        let dayNumber = date.getDate();
+        let month = date.getMonth();
+        let monthName = date.toLocaleString(lang, {
+            month: 'long'
+        });
+
+        document.getElementById('monthName').innerHTML = monthName;
+        document.getElementById('dayNumber').innerHTML = dayNumber;
+
         let clock = document.querySelector('.clock');
 
         function time() {
@@ -21,8 +36,6 @@
             let hours = date.getHours();
             let min = date.getMinutes();
             let sec = date.getSeconds();
-            let dates = date.getDate();
-            let months = date.getMonth();
 
             if (hours < 10) {
                 hours = '0' + hours;
@@ -33,13 +46,8 @@
             if (sec < 10) {
                 sec = '0' + sec;
             }
-            if (dates < 10) {
-                dates = '0' + dates;
-            }
-            if (months < 10) {
-                months = '0' + months;
-            }
-            clock.innerHTML = `${months+1}/${dates} <br> ${hours}:${min}:${sec}`;
+
+            clock.innerHTML = `${hours}:${min}:${sec}`;
         }
 
         setInterval(time, 1000);

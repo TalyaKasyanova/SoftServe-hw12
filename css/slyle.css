@@ -17,3 +17,10 @@ body {
     text-align: center;
     color: #fff200;
 }
+
+.calendar {
+    text-align: center;
+    color: #fff200;
+    font-family: "digital-7", Arial, Helvetica, sans-serif;
+    font-size: 40px;
+}
